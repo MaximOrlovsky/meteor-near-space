@@ -1,0 +1,37 @@
+<template name="Home">
+
+                <header>
+
+                    {{> HeaderTitle line1="Solar System" line2="Planets" }}
+
+                    <div class='pageOption'>
+                        <a href="/about" class='option'>
+                            <span class="inside-text">
+                                About
+                            </span>
+                            <span class="inside">&nbsp;</span>
+                        </a>
+                    </div>
+
+                </header>
+
+                <ul class="planets">
+                    {{#each planets}}
+                        {{> planet}}
+                    {{/each}}
+                </ul>
+
+</template>
+
+
+<template name="planet">
+    <li>
+        <!--<a href="#{{slug}}" data-map="{{map}}" class="planet-disable">-->
+            <span class="planet-icon" style="background:{{bg}};"></span>{{title}}
+        <!--</a>-->
+    </li>
+</template>
+
+
+
+

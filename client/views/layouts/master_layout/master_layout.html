@@ -1,0 +1,19 @@
+<template name="MasterLayout">
+
+    <div class="content" >
+        <div class="inner">
+
+            {{> yield}}
+
+            </div>
+        </div>
+</template>
+
+<template name="HeaderTitle">
+    <h1>
+        <span class="line line1">{{{ line1 }}}</span>
+        {{#if line2}}
+            <span class="line line2">{{{ line2 }}}</span>
+        {{/if}}
+    </h1>
+</template>

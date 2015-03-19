@@ -1,0 +1,177 @@
+/* CSS declarations go here */
+body {
+    background-color: #112233;
+    color: #fff;
+    margin: 0px;
+    overflow: hidden;
+}
+
+a {
+    color:#0078ff;
+}
+
+#container-div {
+    /*opacity: .75;*/
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 2;
+    width: 90%;
+
+    font-family: Oswald;
+    font-weight: 300;
+}
+
+.content .inner {
+    position: relative;
+    left: -50%;
+}
+
+.content header .line {
+    display: block;
+}
+.content header .line1 {
+    color: #ecf0f1;
+}
+
+.content header .line2 {
+    color: #95a5a6;
+    font-size: 40px;
+}
+
+.content h1 {
+    font-family: Oswald;
+    font-weight: 300;
+    font-size: 80px;
+    color: #ecf0f1;
+    text-transform: uppercase;
+}
+
+.content a {
+    color: #2980b9;
+}
+
+.content .menu {
+    text-decoration: none;
+
+
+}
+
+/* ****************************** */
+
+.planets {
+    list-style: none;
+    margin: 200px 0 0 0;
+    padding: 0;
+}
+
+    .planets li,
+    .planets li a {
+        color: #fff;
+    }
+
+    .planets li {
+        width: 10%;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        vertical-align: top;
+
+        font-size: 18px;
+    }
+
+    .planets li .planet-icon {
+        border-radius: 100px;
+        display: inline-block;
+        vertical-align: top;
+        width: 22px;
+        height: 22px;
+        padding: 0;
+        margin: 0 .3em 0 0;
+        background: #999;
+        content: '';
+    }
+
+/* ****************************** */
+
+.content {}
+
+/* ****************************** */
+
+.pageOption {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    width: 7em; height: 5em;
+}
+.option, .option .inside, .option .inside-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.option .inside, .option .inside-text {
+    top: 0;
+    left: 0;
+}
+
+.option .inside-text {
+    padding: 3px 0 0 6px;
+}
+
+.option {
+    overflow: hidden;
+    /* arctan(27 / 40) = 34.01935deg
+     * need to skew by 90deg - 34.01935deg = 55.98065deg
+    */
+    transform: skewX(-55.98deg);
+}
+.option {
+    left: 0;
+    transform-origin: 100% 0;
+}
+
+.option .inside {
+    opacity: .25;
+    transition: .5s;
+    background: #7f8c8d;
+}
+.option .inside:hover {
+    opacity: 1;
+}
+.option .inside, .option .inside-text, .option:after {
+    transform: skewX(55.98deg);
+    transform-origin: inherit;
+}
+/*
+.option:after {
+    position: absolute;
+    margin: .5em 1.65em;
+    color: white;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    content: attr(data-inf);
+}
+*/
+.option:first-child:after {
+    top: 0; left: 0;
+}
+.option:last-child:after {
+    right: 0; bottom: 0;
+}
+
+
+/* ************************** */
+
+.column-two {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+
+    -webkit-column-gap: 2em;
+    -moz-column-gap: 2em;
+    column-gap: 2em;
+}
